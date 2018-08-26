@@ -1,0 +1,22 @@
+﻿
+
+<script src="~/Scripts/Angular/2.Directive.js"></script>
+<div ng-controller="MainController">
+   <div class="row">
+       <input type="text" class="form-control" ng-model="formData.Search" />
+       <button class="btn btn-primary" value="Search" ng-click="testData()">Search</button>
+       
+   </div>
+    <div class="row" ng-repeat="user in Users| orderBy:'-name'" ng-show="showResult">
+        <div class="col-md-6">
+            
+            <div class="col-md-6">
+                {{user.name}}
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
